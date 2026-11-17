@@ -1,58 +1,149 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# BharatTravel Holidays ERP & B2B/B2C Travel Marketplace
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel](https://img.shields.io/badge/Laravel-13.x-red.svg)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.4-blue.svg)](https://php.net)
+[![Database](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://mysql.com)
+[![Tests](https://img.shields.io/badge/Tests-33%20Passed-brightgreen.svg)]()
+[![License](https://img.shields.io/badge/License-Proprietary-darkgreen.svg)]()
 
-## About Laravel
+A modern, full-stack **Indian Travel Marketplace & Travel Agency Enterprise Resource Planning (ERP / CRM)** web platform built on Laravel 13 and PHP 8.4. Designed specifically for Indian outbound and domestic tour operators, DMCs, corporate travel managers, and B2B partner agent networks.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🌟 Key Application Portals
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. Public Travel Marketplace (`/`)
+- **Holiday Packages:** Filter by Domestic / International, price range, duration, themes (Adventure, Honeymoon, Family, Wildlife, Heritage, Pilgrimage).
+- **Destinations Showcase:** Rich destination guides, best time to visit, weather advisories, popular activities, and local attraction maps.
+- **Dedicated Service Desks:**
+  - 🛂 **Visa Assistance** (Tourist, Business, Transit, Student, eVisa, Visa on Arrival).
+  - 📘 **Passport Assistance** (Fresh passport, Tatkaal express, Renewal, Police Clearance Certificate).
+  - ✈️ **Flight Reservations** (Domestic & International PNR ticketing with multi-class options).
+  - 🏨 **Hotel Stays & Luxury Resorts** (5-star, Boutique, Heritage Havelis, Houseboats).
+  - 🚆 **IRCTC Train Assistance** (Tatkaal assistance, Vande Bharat, Tourist circuits).
+  - 🚌 **Luxury Volvo & Intercity Buses** (Sleeper, Semi-sleeper, AC Volvo).
+  - 🗺️ **Customized Holiday Tour Planner** (Bespoke itinerary builder with pax counts and budget preferences).
+- **Content Marketing:** SEO-rich travel blogs, curated customer reviews, interactive FAQ accordion, and newsletter broadcast subscriptions.
 
-## Learning Laravel
+### 2. Customer Self-Service Portal (`/customer/*`)
+- **Travel Dashboard:** Real-time summary of upcoming trips, total holiday spend, and active service files.
+- **My Bookings:** Detailed booking cards with travel dates, passenger manifests, payment receipts, balance status.
+- **1-Click PDF Downloads:** Instant download of **Travel Vouchers** with emergency helpline, and **GST Tax Invoices**.
+- **Visa & Passport Tracker:** Real-time tracking of consular submission, biometric appointments, and dispatch status.
+- **Saved Co-Travellers:** Store passport numbers, expiry dates, and DOB for lightning-fast future bookings.
+- **Customer Wishlist:** Save favorite holiday destinations and packages.
+- **Support Desk:** Raise and track priority support requests.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3. B2B Travel Agent Portal (`/agent/*`)
+- **Agent Dashboard:** Real-time KPI feed showing wholesale sales volume, wallet balance, credit line utilization, and commission rates.
+- **B2B Wholesale Package Tariffs:** Dynamic calculation displaying Gross Selling Price, Agent Net Price, Commission %, and instant Margin.
+- **Client Booking Terminal:** Book holiday packages on behalf of clients with instant GST calculation and automated wallet commission credit.
+- **Financial Ledger & Wallet:** Monitor deposits, NEFT top-up instructions, debit adjustments, and credit line limits.
+- **Commission Statements:** Transparent ledger of earned, pending, and settled B2B commissions.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 4. Admin Travel ERP & CRM (`/admin/*`)
+- **Executive KPI Dashboard:** Real-time metrics for Gross Revenue, Realized Payments, Outstanding Balances, Conversion Rates, and Active Trips.
+- **Lead Inquiries & CRM Pipeline:** Kanban/Table view of inquiries with priority badges, status workflows (New, Contacted, Interested, Quotation Sent, Converted, Lost), call & activity logs, and 1-click lead-to-customer conversion.
+- **Customer 360° Management:** Comprehensive traveler profiles, past booking history, linked co-travelers, and financial ledger.
+- **Package Management:** Rich package editor with day-by-day itineraries, flight & meal inclusions, exclusions, seasonal pricing, and departures.
+- **Quotation Generator:** Dynamic quotation builder generating professional **PDF quotations** with terms, itinerary breakdown, and 1-click booking conversion.
+- **Operations & Dispatch Desk:** Assign tour managers, local transport drivers, vehicle plate numbers, pickup times, and flight tickets.
+- **Supplier & DMC Management:** Vendor database covering Hoteliers, DMCs, Transport Providers, and Visa Facilitators.
+- **Accounts & GST Compliance:**
+  - Automated GST calculation under **SAC 998555** (5% Tour Operator without ITC).
+  - Tax Invoices with GSTIN, State Code, Place of Supply, and CGST/SGST/IGST breakdown.
+  - Expense logging and financial profit margin analytics.
+- **Team & Branch Management:** Organize staff across multiple city branches with sales targets and role-based permissions.
+- **CMS Control Center:** Real-time management of Hero Banners, Customer Testimonials, Blog Articles, and FAQ categories.
+- **Settings:** Configurable agency details, GSTIN, bank coordinates for RTGS/NEFT, and Razorpay payment keys.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## 🛠️ Technology Stack
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+| Layer | Technology | Details |
+|---|---|---|
+| **Backend Framework** | Laravel 13.42.0 | PHP 8.4.7 with strict type hinting, constructor promotion & Eloquent ORM |
+| **Database** | MySQL 8.0 | Full schema with 30+ tables, foreign keys, indexes, and soft deletes |
+| **Frontend Styling** | Tailwind CSS v4.0 | Fully responsive modern UI with luxury travel color palette |
+| **Client Interactivity** | Alpine.js v3 | Dynamic modals, dropdowns, reactive tabs, and calculators |
+| **Icons** | Lucide Icons & FontAwesome 6 | High-definition travel and business iconography |
+| **PDF Engine** | Barryvdh DomPDF v3.1 | Pixel-perfect A4 Travel Vouchers, Tax Invoices & Quotations |
+| **Testing** | PHPUnit 11 | 33 automated Feature tests verifying Auth, Portals, CRM & APIs |
+
+---
+
+## 🔑 Default Login Credentials
+
+All accounts come pre-configured with realistic Indian travel agency demo data:
+
+| Portal | Role | Email Address | Password |
+|---|---|---|---|
+| **Admin ERP** | Super Administrator | `admin@bharattravel.com` | `password` |
+| **Admin ERP** | Sales Consultant | `sales@bharattravel.com` | `password` |
+| **B2B Portal** | Partner Travel Agent | `agent@shreetravels.com` | `password` |
+| **Customer Portal** | Registered Traveler | `rahul.sharma@gmail.com` | `password` |
+
+> ⚡ **Quick Login:** The `/login` page features 1-click quick login buttons to instantly switch between Admin, Sales Staff, B2B Agent, and Customer roles.
+
+---
+
+## 🚀 Quick Start Guide
+
+### Prerequisites
+- PHP >= 8.2 (PHP 8.4 recommended) with `pdo_mysql`, `curl`, `mbstring`, `gd` extensions enabled.
+- Composer 2.x
+- MySQL 8.0+
+- Node.js 18+ & NPM
+
+### Setup Instructions
 
 ```bash
-composer require laravel/boost --dev
+# 1. Clone repository
+git clone <repo-url> travelcrm
+cd travelcrm
 
-php artisan boost:install
+# 2. Install PHP and JS dependencies
+composer install
+npm install
+
+# 3. Setup environment configuration
+cp .env.example .env
+php artisan key:generate
+
+# 4. Configure database in .env (DB_DATABASE=travelcrm, DB_USERNAME=root, DB_PASSWORD=)
+# Ensure MySQL service is running and database exists:
+mysql -u root -e "CREATE DATABASE IF NOT EXISTS travelcrm CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+# 5. Run migrations & database seeders
+php artisan migrate:fresh --seed
+
+# 6. Build frontend assets
+npm run build
+
+# 7. Start the development server
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Access the application in your browser at `http://localhost:8000`.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🧪 Automated Test Suite
 
-## Code of Conduct
+Run the full automated test suite covering all critical workflows:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+php artisan test --compact
+```
 
-## Security Vulnerabilities
+```
+Tests:    33 passed (95 assertions)
+Duration: 1.17s
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📄 License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This software is proprietary software developed for BharatTravel Holidays Pvt Ltd. All rights reserved.
