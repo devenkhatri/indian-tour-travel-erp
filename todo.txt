@@ -1,0 +1,1595 @@
+# MASTER DEVELOPMENT PROMPT
+## Complete Travel Agency Website + Travel ERP CRM
+
+Act as a Principal Laravel Architect, Senior Full-Stack Developer, Database Architect, UI/UX Designer, Security Engineer, DevOps Engineer and QA Automation Engineer.
+
+Your task is to PLAN, DESIGN, DEVELOP, INTEGRATE, TEST, DEBUG and COMPLETE a fully functional, production-ready Travel Agency Management System with a public-facing customer website and a comprehensive CRM / ERP administration panel.
+
+Do not build a demo, prototype, static template or collection of disconnected pages. Build a real working application with functional database operations, proper validations, business logic, relationships, permissions, reports and complete workflows.
+
+The project must be developed inside the currently opened project directory.
+
+---
+
+# 1. TECHNOLOGY STACK
+
+Use the following technology stack:
+
+**Backend**
+- PHP 8.3 or newer, compatible with the installed environment.
+- Laravel latest stable version compatible with the project environment.
+- MySQL 8+.
+- Laravel Eloquent ORM.
+- Laravel migrations, factories and seeders.
+- Laravel Form Requests for validation.
+- Laravel Policies and Gates for authorization.
+- Laravel Queues for background jobs.
+- Laravel Scheduler for automated tasks.
+- Laravel Notifications.
+- Laravel Events and Listeners.
+- REST API architecture where required.
+
+**Frontend**
+- Laravel Blade.
+- Tailwind CSS.
+- Alpine.js.
+- Livewire for interactive components where appropriate.
+- JavaScript.
+- AJAX / Fetch API.
+- Responsive mobile-first layouts.
+
+**Additional tools**
+- Laravel Sanctum for API authentication where needed.
+- Laravel Storage for document management.
+- Laravel Mail for email communication.
+- PHPUnit or Pest for automated tests.
+- Laravel Pint for code formatting.
+- PHPStan or Larastan for static analysis where compatible.
+
+First inspect the existing project, PHP version, Laravel version, dependencies and available infrastructure. Reuse existing working code. Do not destroy or unnecessarily replace existing configurations.
+
+Do not upgrade dependencies blindly.
+
+# 2. PROJECT OBJECTIVE
+
+Develop a comprehensive Indian travel agency platform that supports:
+
+- Domestic tour packages.
+- International tour packages.
+- Customized holiday packages.
+- Honeymoon packages.
+- Family holidays.
+- Group tours.
+- Corporate travel.
+- Flight booking.
+- Train ticket booking assistance.
+- Bus ticket booking.
+- Hotel booking.
+- Visa application assistance.
+- Passport application assistance.
+- Travel insurance.
+- Forex assistance.
+- Car rentals.
+- Airport transfers.
+- Cruise booking.
+- Religious tours.
+- Adventure tourism.
+- Educational tours.
+- MICE and event travel.
+- B2B travel agent management.
+
+The system must support both B2C customers and B2B travel agents.
+
+Build a modular application so new services and integrations can be added without rewriting the existing system.
+
+# 3. DESIGN AND BRANDING
+
+Create a premium Indian travel agency website.
+
+Design direction:
+- Modern Indian travel marketplace.
+- Premium tourism and hospitality aesthetic.
+- Clean, attractive and professional.
+- White background with deep navy, teal and warm orange accents.
+- Attractive destination photography.
+- Large destination banners.
+- Rounded cards.
+- Clean typography.
+- Professional iconography.
+- Consistent spacing.
+- Smooth hover interactions.
+- Subtle animations.
+- Excellent mobile responsiveness.
+
+The design should feel like a combination of a premium Indian travel agency and a modern travel booking marketplace.
+
+Do not copy another website's exact design.
+
+Use:
+- Professional travel imagery.
+- Destination cards.
+- Package cards.
+- Booking forms.
+- Attractive pricing sections.
+- Trust indicators.
+- Customer reviews.
+- Clear CTAs.
+
+All frontend pages must be responsive across desktop, tablet and mobile.
+
+Create a consistent design system with reusable Blade components.
+
+# 4. PUBLIC WEBSITE MODULES
+
+Develop all the following modules.
+
+## 4.1 Homepage
+
+Create:
+- Responsive header.
+- Company logo.
+- Navigation menu.
+- Login/register.
+- Destination search.
+- Hero banner.
+- Travel search widget.
+- Domestic packages.
+- International packages.
+- Popular destinations.
+- Trending destinations.
+- Honeymoon packages.
+- Family holiday packages.
+- Weekend getaways.
+- Group tours.
+- Religious tours.
+- Adventure tours.
+- Fixed departure tours.
+- Special offers.
+- Why choose us section.
+- Customer testimonials.
+- Travel blogs.
+- Newsletter subscription.
+- WhatsApp floating button.
+- Footer with all important links.
+
+All homepage sections must be manageable from the admin panel.
+
+## 4.2 Destination Management - Frontend
+
+Create destination pages with:
+- Country listing.
+- State listing.
+- City listing.
+- Destination images.
+- Destination descriptions.
+- Best time to visit.
+- Popular attractions.
+- Weather information integration placeholder.
+- Popular activities.
+- Available packages.
+- Travel tips.
+- FAQs.
+- Related destinations.
+- SEO metadata.
+
+Create SEO-friendly URLs.
+
+Example:
+- /destinations/india
+- /destinations/india/assam
+- /destinations/thailand
+- /destinations/japan
+
+## 4.3 Tour Packages
+
+Support:
+- Domestic packages.
+- International packages.
+- Custom holiday packages.
+- Honeymoon packages.
+- Family packages.
+- Adventure packages.
+- Pilgrimage packages.
+- Group tours.
+- Corporate tours.
+- Fixed departures.
+- Weekend trips.
+
+Each package must support:
+- Package title.
+- Unique slug.
+- Package code.
+- Destination.
+- Country.
+- Duration.
+- Number of nights.
+- Number of days.
+- Starting price.
+- Discounted price.
+- Price per adult.
+- Child pricing.
+- Infant pricing.
+- Minimum group size.
+- Maximum group size.
+- Package images.
+- Gallery.
+- Videos.
+- Highlights.
+- Day-wise itinerary.
+- Hotel details.
+- Transport details.
+- Activities.
+- Inclusions.
+- Exclusions.
+- Terms and conditions.
+- Cancellation policy.
+- Available departure dates.
+- Available seats.
+- Departure city.
+- Pickup and drop information.
+- Difficulty level where applicable.
+- Tags.
+- Featured status.
+- Publication status.
+- SEO title.
+- Meta description.
+
+Customer functionality:
+- Search packages.
+- Filter by destination.
+- Filter by budget.
+- Filter by duration.
+- Filter by travel type.
+- Filter by category.
+- Sort by price.
+- Sort by popularity.
+- View package details.
+- Compare packages.
+- Add to wishlist.
+- Share package.
+- Download itinerary.
+- Submit enquiry.
+- Request customization.
+- Book package.
+- Pay advance.
+- Download booking confirmation.
+
+Create a dynamic itinerary builder for administrators.
+
+## 4.4 Customized Tour Enquiry
+
+Create an advanced form containing:
+- Customer name.
+- Mobile number.
+- Email.
+- Departure city.
+- Destination.
+- Travel start date.
+- Travel end date.
+- Number of adults.
+- Number of children.
+- Number of infants.
+- Approximate budget.
+- Preferred hotel category.
+- Transport preference.
+- Special requirements.
+- Additional notes.
+
+Automatically create a CRM lead when submitted.
+
+## 4.5 Flight Services
+
+Create:
+- Domestic flight enquiry.
+- International flight enquiry.
+- One-way.
+- Round-trip.
+- Multi-city.
+- Departure airport.
+- Arrival airport.
+- Departure date.
+- Return date.
+- Passenger count.
+- Adult, child and infant classification.
+- Cabin class.
+- Passenger information.
+- Flight enquiry.
+- Booking status.
+- PNR details.
+- Ticket upload.
+- Ticket download.
+- Cancellation request.
+- Rescheduling request.
+- Refund tracking.
+
+Implement a flight supplier integration architecture.
+
+Do not fabricate live flight availability or ticket confirmations.
+
+If an API is not configured, provide a clear manual enquiry and booking workflow.
+
+## 4.6 Train Services
+
+Create:
+- Train enquiry.
+- From station.
+- To station.
+- Travel date.
+- Passenger details.
+- Class preference.
+- PNR status link or authorized API integration.
+- Ticket upload.
+- Ticket download.
+- Cancellation assistance.
+- Refund status.
+
+Do not claim to issue IRCTC tickets without an authorized integration.
+
+## 4.7 Bus Services
+
+Create:
+- From city.
+- To city.
+- Journey date.
+- Passenger count.
+- AC/Non-AC.
+- Sleeper/Seater.
+- Boarding point.
+- Dropping point.
+- Bus supplier integration.
+- Ticket confirmation.
+- Ticket download.
+- Cancellation management.
+
+## 4.8 Hotel Booking
+
+Create:
+- Destination search.
+- Check-in.
+- Check-out.
+- Adults.
+- Children.
+- Room count.
+- Hotel category.
+- Hotel listings.
+- Hotel photos.
+- Amenities.
+- Room types.
+- Pricing.
+- Availability.
+- Booking requests.
+- Confirmation.
+- Cancellation.
+- Voucher generation.
+
+Support manual supplier bookings and future hotel API integrations.
+
+## 4.9 Visa Services
+
+Create visa service pages and application workflows.
+
+Categories:
+- Tourist visa.
+- Business visa.
+- Student visa.
+- Medical visa.
+- Transit visa.
+- Work visa assistance.
+
+Features:
+- Country-wise visa listing.
+- Visa requirements.
+- Document checklist.
+- Visa fees.
+- Processing time information.
+- Eligibility information.
+- Application form.
+- Passport information.
+- Travel information.
+- Document uploads.
+- Appointment management.
+- Payment.
+- Application status.
+- Internal remarks.
+- Customer notifications.
+- Approval/rejection status.
+- Visa document download.
+
+Visa statuses:
+- New.
+- Documents Pending.
+- Documents Received.
+- Under Verification.
+- Ready for Submission.
+- Submitted.
+- Appointment Scheduled.
+- Under Processing.
+- Approved.
+- Rejected.
+- Delivered.
+- Cancelled.
+
+All visa rules and processing times must be editable and carry a last-verified date. Never guarantee visa approval.
+
+## 4.10 Passport Assistance
+
+Create:
+- New passport assistance.
+- Passport renewal.
+- Reissue.
+- Tatkal assistance.
+- Document checklist.
+- Application details.
+- Document uploads.
+- Appointment details.
+- Status tracking.
+- Staff assignment.
+- Customer communication.
+- Payment records.
+
+Clearly identify this as passport application assistance, not an official government passport issuance service.
+
+## 4.11 Additional Services
+
+Create manageable service pages for:
+- Travel insurance.
+- Forex assistance.
+- International SIM.
+- Car rental.
+- Airport pickup/drop.
+- Local sightseeing.
+- Cruise booking.
+- Corporate travel.
+- Educational tours.
+- Group travel.
+- Honeymoon planning.
+
+Each service should support:
+- Description.
+- Pricing.
+- Enquiry form.
+- Booking request.
+- Documents.
+- Payment.
+- Status tracking.
+
+# 5. CUSTOMER PORTAL
+
+Create a complete customer dashboard.
+
+Features:
+- Registration.
+- Login.
+- OTP authentication architecture.
+- Email verification.
+- Forgot password.
+- Profile management.
+- Passenger management.
+- Family member management.
+- Saved traveller profiles.
+- Secure passport document vault.
+- My enquiries.
+- My bookings.
+- My package bookings.
+- My flight bookings.
+- My hotel bookings.
+- My visa applications.
+- My passport applications.
+- My payments.
+- My refunds.
+- My invoices.
+- Download tickets.
+- Download vouchers.
+- Download itineraries.
+- Cancellation requests.
+- Support tickets.
+- Notifications.
+- Wishlist.
+- Change password.
+
+Create a clean customer dashboard with cards showing upcoming trips, pending payments, active applications and recent activity.
+
+# 6. ADMIN CRM / ERP
+
+Create a completely separate, professional admin panel.
+
+Admin dashboard must show:
+- Total customers.
+- Total leads.
+- New enquiries.
+- Converted leads.
+- Total bookings.
+- Confirmed bookings.
+- Pending bookings.
+- Cancelled bookings.
+- Revenue.
+- Expenses.
+- Gross profit.
+- Outstanding payments.
+- Upcoming departures.
+- Upcoming arrivals.
+- Pending visa applications.
+- Pending passport applications.
+- Upcoming follow-ups.
+- Supplier payments.
+- Monthly revenue charts.
+- Package performance.
+- Employee performance.
+
+Use real database queries, not hardcoded dashboard numbers.
+
+## 6.1 CRM Lead Management
+
+Create:
+- Add lead.
+- Edit lead.
+- Delete lead with appropriate permissions.
+- Import leads.
+- Export leads.
+- Assign employees.
+- Assign branches.
+- Lead source.
+- Lead category.
+- Lead priority.
+- Lead status.
+- Follow-up dates.
+- Reminder notifications.
+- Call history.
+- Email history.
+- WhatsApp history.
+- Internal notes.
+- Lead conversion.
+- Lost lead reasons.
+- Duplicate lead detection.
+- Lead activity timeline.
+
+Lead sources:
+- Website.
+- WhatsApp.
+- Instagram.
+- Facebook.
+- Google.
+- Phone.
+- Referral.
+- Walk-in.
+- B2B agent.
+- Other.
+
+Lead statuses:
+- New.
+- Contacted.
+- Interested.
+- Follow-up.
+- Quotation Sent.
+- Negotiation.
+- Converted.
+- Lost.
+
+When a lead is converted, allow the user to create a customer and booking without duplicating existing customer records.
+
+## 6.2 Customer Management
+
+Create:
+- Customer listing.
+- Customer profile.
+- Customer contacts.
+- Address.
+- Passenger details.
+- Travel history.
+- Booking history.
+- Payment history.
+- Documents.
+- Family members.
+- Notes.
+- Internal communication.
+- Customer segmentation.
+- Customer status.
+- Customer activity timeline.
+
+## 6.3 Package Administration
+
+Create a full CRUD interface for:
+- Packages.
+- Destinations.
+- Categories.
+- Itineraries.
+- Hotels.
+- Activities.
+- Inclusions.
+- Exclusions.
+- Pricing.
+- Departures.
+- Inventory.
+- Discounts.
+- Coupons.
+- Package images.
+
+Provide a professional package creation wizard.
+
+## 6.4 Booking Management
+
+Create a central booking management system for all services.
+
+Booking fields:
+- Booking number.
+- Customer.
+- Service type.
+- Package.
+- Departure date.
+- Return date.
+- Travellers.
+- Adults.
+- Children.
+- Infants.
+- Selling amount.
+- Discount.
+- Taxes.
+- Total payable.
+- Amount paid.
+- Outstanding balance.
+- Supplier cost.
+- Expected profit.
+- Assigned employee.
+- Booking status.
+- Payment status.
+- Internal remarks.
+
+Booking statuses:
+- Enquiry.
+- Quotation.
+- Pending Payment.
+- Partially Paid.
+- Confirmed.
+- In Progress.
+- Completed.
+- Cancelled.
+- Refunded.
+
+Features:
+- Manual booking creation.
+- Website booking synchronization.
+- Booking modification.
+- Booking cancellation.
+- Payment collection.
+- Refund management.
+- Booking documents.
+- Customer vouchers.
+- Supplier vouchers.
+- Booking timeline.
+- Invoice generation.
+
+Use database transactions for critical booking and payment operations.
+
+Prevent duplicate booking references and accidental duplicate payment records.
+
+## 6.5 Quotation Management
+
+Create a professional quotation module.
+
+Features:
+- Create quotation.
+- Select customer.
+- Select package.
+- Customize itinerary.
+- Add hotels.
+- Add transport.
+- Add activities.
+- Add meals.
+- Add extra services.
+- Add discounts.
+- Add taxes.
+- Add payment terms.
+- Add validity date.
+- Add terms and conditions.
+- Calculate total amount.
+- Calculate profit margin.
+- Generate branded PDF.
+- Email quotation.
+- Share quotation through WhatsApp.
+- Customer approval status.
+- Convert quotation into booking.
+
+## 6.6 Visa & Passport Operations
+
+Create a unified application management panel with:
+- Application reference.
+- Customer.
+- Service type.
+- Country.
+- Visa category.
+- Passport details.
+- Required documents.
+- Uploaded documents.
+- Verification checklist.
+- Assigned employee.
+- Application status.
+- Appointment date.
+- Submission date.
+- Expected completion.
+- Actual completion.
+- Fees.
+- Internal expenses.
+- Customer communication.
+- Document download.
+- Audit trail.
+
+## 6.7 Travel Operations Management
+
+Create an operations module to manage confirmed trips.
+
+Features:
+- Departure calendar.
+- Arrival calendar.
+- Passenger manifests.
+- Tour leader assignment.
+- Guide assignment.
+- Driver assignment.
+- Vehicle allocation.
+- Hotel allocation.
+- Airport pickup.
+- Airport drop.
+- Local transport.
+- Sightseeing schedule.
+- Supplier confirmation.
+- Room allocation.
+- Meal preferences.
+- Special customer requirements.
+- Emergency contact information.
+- Travel document checklist.
+- Operational status.
+- Trip completion.
+
+Create a trip-wise operational dashboard.
+
+## 6.8 Supplier Management
+
+Manage:
+- Airlines.
+- Hotels.
+- Resorts.
+- Transport vendors.
+- Cab operators.
+- Bus operators.
+- Tour operators.
+- DMCs.
+- Visa consultants.
+- Insurance providers.
+- Other vendors.
+
+Features:
+- Supplier profile.
+- Contact information.
+- GST details.
+- Bank details with restricted access.
+- Contract information.
+- Service categories.
+- Supplier rates.
+- Negotiated prices.
+- Commission.
+- Outstanding balances.
+- Supplier invoices.
+- Supplier payments.
+- Booking history.
+- Performance notes.
+
+## 6.9 Accounts & Finance
+
+Develop an integrated booking-centric accounting module.
+
+Features:
+- Customer payments.
+- Customer advances.
+- Partial payments.
+- Outstanding payments.
+- Refunds.
+- Supplier payments.
+- Vendor advances.
+- Expenses.
+- Revenue.
+- Booking profitability.
+- Employee expenses.
+- Branch-wise accounts.
+- Payment receipts.
+- Tax invoices.
+- Credit notes.
+- Debit notes.
+- Daily cashbook.
+- Bank accounts.
+- Cash accounts.
+- UPI transactions.
+- Payment gateway records.
+- Financial reports.
+
+Indian financial requirements:
+- INR as default currency.
+- Multi-currency support.
+- GST configuration.
+- HSN/SAC configuration where applicable.
+- CGST.
+- SGST.
+- IGST.
+- TCS configuration where applicable.
+- GST reports.
+- TCS reports.
+- Tax invoice numbering.
+- Financial year management.
+
+Tax calculations must be configurable and validated against applicable rules. Do not hardcode one tax rate for every service.
+
+Maintain an immutable transaction ledger for posted payments. Use proper reversal/refund entries instead of silently editing historical financial transactions.
+
+## 6.10 Employee & Role Management
+
+Create role-based access control.
+
+Default roles:
+- Super Admin.
+- Admin.
+- Branch Manager.
+- Sales Manager.
+- Sales Executive.
+- Travel Consultant.
+- Visa Executive.
+- Operations Manager.
+- Operations Executive.
+- Accounts Manager.
+- Accountant.
+- Customer Support.
+- B2B Agent.
+
+Features:
+- Employee CRUD.
+- Roles.
+- Permissions.
+- Branch assignment.
+- Department.
+- Employee activity.
+- Task assignment.
+- Follow-up management.
+- Sales targets.
+- Commission management.
+- Employee reports.
+- Login history.
+- Audit logs.
+
+Restrict access to sensitive financial and passport data based on permissions.
+
+## 6.11 Marketing & Communication
+
+Integrate an extensible communication module.
+
+Features:
+- Email notifications.
+- WhatsApp Business API integration.
+- SMS integration.
+- Booking confirmation.
+- Payment reminder.
+- Travel reminder.
+- Visa status notification.
+- Passport application notification.
+- Quotation notification.
+- Follow-up reminders.
+- Marketing campaigns.
+- Customer segmentation.
+- Promotional offers.
+- Coupon management.
+- Referral management.
+
+Create configurable message templates.
+
+Never expose API credentials in frontend code.
+
+## 6.12 Reports & Analytics
+
+Create:
+- Lead reports.
+- Lead conversion reports.
+- Customer reports.
+- Booking reports.
+- Package-wise sales.
+- Destination-wise sales.
+- Domestic vs international sales.
+- Revenue reports.
+- Profit reports.
+- Expense reports.
+- Outstanding payment reports.
+- Refund reports.
+- Supplier reports.
+- Visa reports.
+- Passport reports.
+- Employee performance.
+- Branch performance.
+- Commission reports.
+- GST reports.
+- TCS reports.
+
+Provide date filters, branch filters, employee filters and Excel/PDF exports.
+
+# 7. B2B AGENT PORTAL
+
+Create a separate B2B portal.
+
+Features:
+- Agent registration.
+- Agent approval.
+- Agent login.
+- Agent dashboard.
+- Agent profile.
+- Agent verification.
+- Agent-specific package pricing.
+- Commission management.
+- Agent bookings.
+- Booking history.
+- Agent wallet/ledger.
+- Credit limit configuration.
+- Outstanding balance.
+- Agent invoices.
+- Payment history.
+- Agent performance.
+- Agent support tickets.
+
+Allow administrators to define agent-specific pricing and commissions.
+
+# 8. CMS MANAGEMENT
+
+Create a complete website CMS.
+
+Manage:
+- Homepage banners.
+- Homepage sections.
+- Navigation menus.
+- Footer.
+- Pages.
+- About us.
+- Contact us.
+- Privacy policy.
+- Terms and conditions.
+- Cancellation policy.
+- Refund policy.
+- Blog categories.
+- Blog articles.
+- FAQs.
+- Testimonials.
+- Destination content.
+- Service pages.
+- SEO metadata.
+- Open Graph images.
+- Sitemap.
+- Robots configuration.
+
+Every published package and destination should have SEO-friendly URLs.
+
+# 9. DATABASE ARCHITECTURE
+
+Design a normalized MySQL database.
+
+Create appropriate migrations, models, relationships, indexes, constraints and seeders.
+
+Suggested tables include:
+
+**Core**
+- users
+- roles
+- permissions
+- role_user
+- permission_role
+- branches
+- departments
+- employees
+- settings
+- activity_logs
+
+**CRM**
+- customers
+- customer_addresses
+- customer_passengers
+- customer_documents
+- leads
+- lead_sources
+- lead_activities
+- lead_followups
+- tasks
+- notes
+
+**Travel**
+- countries
+- states
+- cities
+- destinations
+- destination_images
+- package_categories
+- packages
+- package_images
+- package_itineraries
+- package_inclusions
+- package_exclusions
+- package_departures
+- package_pricing
+- package_inventory
+- hotels
+- hotel_rooms
+- activities
+
+**Bookings**
+- bookings
+- booking_passengers
+- booking_items
+- booking_status_histories
+- booking_documents
+- booking_cancellations
+- booking_refunds
+- booking_vouchers
+
+**Services**
+- flight_enquiries
+- flight_bookings
+- train_bookings
+- bus_bookings
+- hotel_bookings
+- visa_applications
+- visa_documents
+- passport_applications
+- passport_documents
+- travel_insurance
+- forex_requests
+- car_rentals
+
+**Finance**
+- payments
+- refunds
+- invoices
+- invoice_items
+- expenses
+- supplier_invoices
+- supplier_payments
+- accounts
+- ledger_entries
+- tax_rates
+- financial_years
+
+**Operations**
+- trips
+- trip_passengers
+- trip_assignments
+- vehicles
+- drivers
+- guides
+- transfers
+- room_allocations
+- trip_activities
+
+**Suppliers**
+- suppliers
+- supplier_categories
+- supplier_services
+- supplier_contracts
+- supplier_rates
+
+**B2B**
+- agents
+- agent_pricing
+- agent_commissions
+- agent_transactions
+- agent_credit_limits
+
+**Marketing**
+- message_templates
+- notifications
+- campaigns
+- coupons
+- referrals
+- subscribers
+
+**CMS**
+- pages
+- blogs
+- blog_categories
+- banners
+- testimonials
+- faqs
+- menus
+
+**Support**
+- support_tickets
+- support_messages
+
+This is a starting schema, not a rigid list. Add missing tables, pivot tables and supporting structures as required.
+
+Database requirements:
+- Proper foreign keys.
+- Appropriate cascading rules.
+- Indexed searchable fields.
+- Unique identifiers.
+- Decimal fields for financial values.
+- UTC storage for timestamps where practical, with India timezone presentation.
+- Soft deletes where business history must be retained.
+- Created_by and updated_by where appropriate.
+- Avoid storing unnecessary personal information.
+- Never store raw payment card information.
+
+Use factories and realistic seeders to populate development data.
+
+# 10. API & THIRD-PARTY INTEGRATIONS
+
+Build a service-provider architecture for future integrations.
+
+Potential integrations:
+- Razorpay or another Indian payment gateway.
+- Cashfree.
+- WhatsApp Business Cloud API.
+- SMS gateway.
+- SMTP email.
+- Flight booking supplier APIs.
+- Hotel booking APIs.
+- Bus booking APIs.
+- Forex providers.
+- Travel insurance providers.
+- Google Maps.
+- Google Analytics.
+- Google reCAPTCHA or equivalent.
+
+Requirements:
+- Use environment variables for credentials.
+- Build integration interfaces and service classes.
+- Add webhook endpoints with signature verification.
+- Add API request logging with sensitive data redaction.
+- Handle failures gracefully.
+- Add retry mechanisms where appropriate.
+- Add sandbox/test mode.
+- Clearly show unavailable integrations in the admin panel.
+- Never fabricate API responses, tickets, availability or payment success.
+
+If API credentials are missing, complete the manual workflow and clearly mark the integration as not configured.
+
+# 11. SECURITY REQUIREMENTS
+
+Implement:
+- CSRF protection.
+- XSS protection.
+- SQL injection protection.
+- Secure password hashing.
+- Authentication middleware.
+- Role and permission middleware.
+- Rate limiting.
+- Login throttling.
+- Session security.
+- Input validation.
+- Secure file uploads.
+- MIME and file size validation.
+- Private document storage.
+- Signed URLs or authorized document downloads.
+- Audit logging.
+- API authentication.
+- Webhook signature verification.
+- Environment-based secrets.
+- Secure error handling.
+- Database backup strategy.
+
+Sensitive documents such as passports, identity documents and financial information must not be publicly accessible.
+
+Implement document access controls and retention policies. Obtain appropriate consent before collecting or storing personal information.
+
+Never log passwords, OTPs, access tokens, payment credentials or full passport numbers.
+
+# 12. USER EXPERIENCE REQUIREMENTS
+
+All modules must have:
+- Search.
+- Pagination.
+- Filters.
+- Sorting.
+- Create.
+- View.
+- Edit.
+- Delete with confirmation and authorization.
+- Status updates.
+- Bulk actions where appropriate.
+- Export where appropriate.
+- Loading states.
+- Empty states.
+- Validation messages.
+- Success notifications.
+- Error notifications.
+
+Use consistent tables, forms, modals, dropdowns and reusable components.
+
+All buttons must perform real actions.
+
+Do not create decorative buttons that do nothing.
+
+All forms must save to the database and display appropriate validation errors.
+
+Use server-side validation even when frontend validation exists.
+
+# 13. TESTING REQUIREMENTS
+
+Testing is mandatory.
+
+Use PHPUnit or Pest according to the existing project setup.
+
+Create tests for:
+
+**Authentication**
+- Admin login.
+- Customer registration.
+- Customer login.
+- Invalid credentials.
+- Password reset.
+- Unauthorized access.
+
+**CRM**
+- Lead creation.
+- Lead assignment.
+- Follow-up creation.
+- Lead conversion.
+- Duplicate lead handling.
+
+**Packages**
+- Package creation.
+- Package updates.
+- Package publishing.
+- Package filtering.
+- Package enquiry.
+
+**Bookings**
+- Booking creation.
+- Booking confirmation.
+- Booking modification.
+- Booking cancellation.
+- Passenger validation.
+- Duplicate booking prevention.
+
+**Payments**
+- Partial payment.
+- Full payment.
+- Outstanding balance.
+- Duplicate payment prevention.
+- Refund.
+- Payment webhook validation.
+
+**Visa and Passport**
+- Application creation.
+- Document upload.
+- Document authorization.
+- Status changes.
+- Customer tracking.
+
+**Permissions**
+- Role-based access.
+- Restricted financial pages.
+- Restricted document access.
+- Unauthorized API access.
+
+**Reports**
+- Revenue calculation.
+- Booking totals.
+- Outstanding balances.
+- Profit calculation.
+
+Also test:
+- Mobile responsive layouts.
+- Form validations.
+- File uploads.
+- Search and pagination.
+- Database constraints.
+- Failed API responses.
+- Queue jobs.
+- Scheduled tasks.
+
+Use Laravel HTTP tests and browser-based end-to-end tests where the environment supports them.
+
+# 14. UI PAGES TO COMPLETE
+
+Public website:
+- Homepage.
+- About.
+- Contact.
+- Domestic packages.
+- International packages.
+- Destination listing.
+- Destination detail.
+- Package listing.
+- Package details.
+- Customized tour enquiry.
+- Flight services.
+- Train services.
+- Bus services.
+- Hotel services.
+- Visa services.
+- Passport services.
+- Other services.
+- Blog listing.
+- Blog details.
+- Login.
+- Registration.
+- Customer dashboard.
+- Booking details.
+- Payment pages.
+- Support pages.
+- Privacy policy.
+- Terms and conditions.
+
+Admin panel:
+- Dashboard.
+- Leads.
+- Customers.
+- Follow-ups.
+- Tasks.
+- Packages.
+- Destinations.
+- Categories.
+- Itineraries.
+- Departures.
+- Bookings.
+- Quotations.
+- Passengers.
+- Flights.
+- Trains.
+- Buses.
+- Hotels.
+- Visa.
+- Passport.
+- Operations.
+- Suppliers.
+- Accounts.
+- Payments.
+- Refunds.
+- Invoices.
+- Expenses.
+- Employees.
+- Roles.
+- Branches.
+- Agents.
+- Marketing.
+- Reports.
+- CMS.
+- Settings.
+- Integrations.
+- Audit logs.
+
+B2B portal:
+- Dashboard.
+- Packages.
+- Bookings.
+- Customers.
+- Commissions.
+- Wallet/ledger.
+- Payments.
+- Invoices.
+- Support.
+- Profile.
+
+# 15. DEVELOPMENT EXECUTION STRATEGY
+
+Do not attempt to generate the entire application as disconnected code in one response.
+
+Work directly inside the project and complete the application in logical phases.
+
+**Phase 1: Project inspection and architecture**
+- Inspect the repository.
+- Inspect existing code.
+- Identify missing dependencies.
+- Design application architecture.
+- Prepare implementation checklist.
+- Prepare database schema.
+
+**Phase 2: Foundation**
+- Authentication.
+- Roles and permissions.
+- Admin layout.
+- Customer layout.
+- B2B layout.
+- Common components.
+- Settings.
+
+**Phase 3: Travel website**
+- Homepage.
+- Destinations.
+- Packages.
+- Services.
+- Customer registration.
+- Enquiry forms.
+
+**Phase 4: CRM**
+- Leads.
+- Customers.
+- Follow-ups.
+- Tasks.
+- Quotations.
+
+**Phase 5: Booking engine**
+- Package bookings.
+- Flight enquiries.
+- Hotel bookings.
+- Train and bus workflows.
+- Passenger management.
+- Booking documents.
+
+**Phase 6: Visa and passport**
+- Applications.
+- Document management.
+- Tracking.
+- Notifications.
+
+**Phase 7: Operations and suppliers**
+- Trips.
+- Vehicles.
+- Drivers.
+- Guides.
+- Hotels.
+- Vendors.
+
+**Phase 8: Accounts**
+- Payments.
+- Invoices.
+- Refunds.
+- Expenses.
+- Ledger.
+- GST/TCS configuration.
+- Reports.
+
+**Phase 9: B2B and marketing**
+- Agent portal.
+- Commissions.
+- WhatsApp.
+- Email.
+- SMS.
+
+**Phase 10: CMS and analytics**
+- Content management.
+- SEO.
+- Reports.
+- Exports.
+
+**Phase 11: Testing and debugging**
+- Execute all migrations.
+- Execute seeders.
+- Run automated tests.
+- Run static analysis.
+- Run code formatting.
+- Check all routes.
+- Check all database relationships.
+- Check authorization.
+- Check all forms.
+- Check all major workflows.
+- Fix errors.
+- Repeat tests.
+
+**Phase 12: Final verification**
+- Verify all pages.
+- Verify all navigation links.
+- Verify all CRUD functionality.
+- Verify all customer workflows.
+- Verify admin workflows.
+- Verify B2B workflows.
+- Verify responsive layouts.
+- Verify security.
+- Prepare deployment documentation.
+
+# 16. AUTONOMOUS CODING RULES
+
+These instructions are extremely important.
+
+1. Do not stop after creating the folder structure.
+2. Do not stop after creating database migrations.
+3. Do not stop after designing the homepage.
+4. Do not create static pages instead of functional modules.
+5. Do not use hardcoded dashboard statistics.
+6. Do not leave TODO comments for core requested functionality.
+7. Do not use fake booking confirmations.
+8. Do not use fake payment success.
+9. Do not expose sensitive information.
+10. Do not create duplicate models or migrations.
+11. Do not unnecessarily rewrite working files.
+12. Do not break existing functionality.
+13. Do not silently skip a failed test.
+14. Do not claim an integration is complete without testing it.
+15. Do not ask me to manually implement code that you can implement yourself.
+
+If a requirement is ambiguous, choose a sensible and secure industry-standard implementation and document the assumption.
+
+If an API key or external account is required, implement the integration architecture, environment configuration, sandbox workflow and manual fallback. Clearly identify what needs external credentials.
+
+If a dependency or service is unavailable, continue with the remaining implementation.
+
+When a command fails:
+- Read the complete error.
+- Identify the root cause.
+- Correct the code or configuration.
+- Rerun the failed command.
+- Confirm that it passes.
+
+Maintain a development checklist and update it as modules are completed.
+
+If you reach a context or execution limit, save progress in a DEVELOPMENT_PROGRESS.md file with:
+- Completed modules.
+- Pending modules.
+- Files created.
+- Database migrations completed.
+- Errors encountered.
+- Tests executed.
+- Exact next steps.
+
+On continuation, read that file and resume from the next incomplete task. Never restart the project unnecessarily.
+
+# 17. REQUIRED PROJECT DOCUMENTATION
+
+Create:
+- README.md
+- DEVELOPMENT_PROGRESS.md
+- DATABASE_DOCUMENTATION.md
+- MODULE_DOCUMENTATION.md
+- API_DOCUMENTATION.md
+- INSTALLATION_GUIDE.md
+- DEPLOYMENT_GUIDE.md
+- TESTING_REPORT.md
+- .env.example
+
+Document:
+- Installation commands.
+- Environment configuration.
+- Database setup.
+- Migration commands.
+- Seeder commands.
+- Queue setup.
+- Scheduler setup.
+- Storage linking.
+- Admin login credentials for development.
+- Customer test credentials.
+- B2B test credentials.
+- API configuration.
+- Production deployment.
+
+Do not commit actual production credentials.
+
+# 18. FINAL ACCEPTANCE CRITERIA
+
+The application will only be considered complete when:
+
+- Public website is functional.
+- Customer dashboard is functional.
+- Admin CRM is functional.
+- B2B portal is functional.
+- Package management works.
+- Enquiry management works.
+- Lead management works.
+- Customer management works.
+- Quotation generation works.
+- Booking workflows work.
+- Visa and passport workflows work.
+- Travel operations work.
+- Supplier management works.
+- Financial transactions work.
+- Invoices and receipts work.
+- Reports use actual database information.
+- Role-based permissions work.
+- CMS works.
+- Responsive design works.
+- Migrations run successfully.
+- Seeders run successfully.
+- Automated tests pass.
+- Critical security checks pass.
+- Documentation is complete.
+
+Do not report 100% completion if any mandatory module remains unfinished or untested.
+
+# 19. START EXECUTION NOW
+
+Begin by inspecting the current project directory and environment.
+
+Then:
+1. Prepare the architecture and checklist.
+2. Create the database structure.
+3. Build the complete application.
+4. Implement all requested modules.
+5. Integrate all available services.
+6. Test all major workflows.
+7. Fix all discovered issues.
+8. Document the application.
+9. Produce a final completion report.
+
+You have permission to create and modify project files, run development commands, install compatible dependencies and execute tests inside the project directory.
+
+Do not merely explain what you would build. Actually build it.
+
+Your objective is to deliver a complete, working Laravel Travel Agency ERP and Booking Website, not just a development plan.
