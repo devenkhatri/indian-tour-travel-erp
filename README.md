@@ -4,7 +4,7 @@
 [![PHP](https://img.shields.io/badge/PHP-8.4-blue.svg)](https://php.net)
 [![Database](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://mysql.com)
 [![Tests](https://img.shields.io/badge/Tests-33%20Passed-brightgreen.svg)]()
-[![License](https://img.shields.io/badge/License-Proprietary-darkgreen.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A modern, full-stack **Indian Travel Marketplace & Travel Agency Enterprise Resource Planning (ERP / CRM)** web platform built on Laravel 13 and PHP 8.4. Designed specifically for Indian outbound and domestic tour operators, DMCs, corporate travel managers, and B2B partner agent networks.
 
@@ -146,4 +146,4 @@ Duration: 1.17s
 
 ## 📄 License
 
-This software is proprietary software developed for BharatTravel Holidays Pvt Ltd. All rights reserved.
+This project is open-source software licensed under the [MIT License](LICENSE).
