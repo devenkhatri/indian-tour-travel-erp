@@ -2,6 +2,7 @@
 
 [![Laravel](https://img.shields.io/badge/Laravel-13.x-red.svg)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.4-blue.svg)](https://php.net)
+[![Docker](https://img.shields.io/badge/Docker-Compose%20Ready-2496ED.svg?logo=docker&logoColor=white)](https://www.docker.com)
 [![Database](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://mysql.com)
 [![Tests](https://img.shields.io/badge/Tests-33%20Passed-brightgreen.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -88,10 +89,64 @@ All accounts come pre-configured with realistic Indian travel agency demo data:
 
 ---
 
-## 🚀 Quick Start Guide
+## 🐳 Quick Start with Docker (Recommended)
+
+Get the entire full-stack platform running in seconds with zero local PHP, Composer, or MySQL dependencies.
 
 ### Prerequisites
-- PHP >= 8.2 (PHP 8.4 recommended) with `pdo_mysql`, `curl`, `mbstring`, `gd` extensions enabled.
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) or Docker Engine (>= 24.0) with Docker Compose (v2.0+)
+
+### 1. Clone & Configure Environment
+```bash
+git clone <repo-url> travelcrm
+cd travelcrm
+
+# Copy pre-configured Docker environment variables
+cp .env.docker.example .env
+```
+
+### 2. Build and Launch Containers
+```bash
+docker compose up -d --build
+```
+> This starts the multi-container stack:
+> - `app`: PHP 8.4-FPM with all required extensions (`pdo_mysql`, `gd`, `intl`, `redis`, `opcache`)
+> - `web`: Nginx 1.27 reverse proxy on port `8000`
+> - `db`: MySQL 8.0 on internal network and forwarded to port `3306`
+> - `redis`: Redis 7 in-memory cache and queue broker on port `6379`
+> - `queue`: Dedicated Laravel background queue worker for async PDFs & emails
+> - `scheduler`: Periodic task execution worker (`schedule:work`)
+> - `mailpit`: Local email testing UI on port `8025` (SMTP on `1025`)
+
+### 3. Initialize Database & Demo Seed Data
+```bash
+docker compose exec app php artisan migrate:fresh --seed
+```
+
+### 4. Open in Browser
+- **Web Platform & ERP:** [http://localhost:8000](http://localhost:8000)
+- **Mailpit Web Inbox:** [http://localhost:8025](http://localhost:8025)
+
+---
+
+### 🛠️ Useful Docker Commands
+
+| Command | Purpose |
+|---|---|
+| `docker compose exec app php artisan test --compact` | Run full automated test suite |
+| `docker compose exec app php artisan tinker` | Interactive PHP Tinker console |
+| `docker compose logs -f app` | Tail PHP-FPM application logs |
+| `docker compose logs -f queue` | Tail queue worker job processing logs |
+| `docker compose exec app bash` | Shell access into the application container |
+| `docker compose down` | Stop all containers gracefully |
+| `docker compose down -v` | Stop containers and wipe MySQL/Redis volumes |
+
+---
+
+## 💻 Alternative: Native Local Setup (Without Docker)
+
+### Prerequisites
+- PHP >= 8.2 (PHP 8.4 recommended) with `pdo_mysql`, `curl`, `mbstring`, `gd`, `bcmath`, `intl` extensions enabled.
 - Composer 2.x
 - MySQL 8.0+
 - Node.js 18+ & NPM
