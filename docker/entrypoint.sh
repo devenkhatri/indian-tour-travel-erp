@@ -23,8 +23,8 @@ if [ ! -f /var/www/html/vendor/autoload.php ]; then
     composer install --no-interaction --prefer-dist --optimize-autoloader
 fi
 
-# Auto-generate application encryption key if missing
-if [ -f /var/www/html/.env ]; then
+# Auto-generate application encryption key if missing (only in primary app container to prevent race conditions)
+if [ -z "$CONTAINER_ROLE" ] && [ -f /var/www/html/.env ]; then
     if ! grep -q "^APP_KEY=base64:" /var/www/html/.env && ! grep -q "^APP_KEY=.*[a-zA-Z0-9]" /var/www/html/.env; then
         echo "APP_KEY is empty. Generating new application key..."
         php artisan key:generate --force --no-interaction

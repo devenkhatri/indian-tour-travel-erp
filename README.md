@@ -112,8 +112,8 @@ docker compose up -d --build
 > This starts the multi-container stack:
 > - `app`: PHP 8.4-FPM with all required extensions (`pdo_mysql`, `gd`, `intl`, `redis`, `opcache`)
 > - `web`: Nginx 1.27 reverse proxy on port `8000`
-> - `db`: MySQL 8.0 on internal network and forwarded to port `3306`
-> - `redis`: Redis 7 in-memory cache and queue broker on port `6379`
+> - `db`: MySQL 8.0 on internal network and forwarded to port `3307` (configurable via `FORWARD_DB_PORT`)
+> - `redis`: Redis 7 in-memory cache and queue broker on port `6380` (configurable via `FORWARD_REDIS_PORT`)
 > - `queue`: Dedicated Laravel background queue worker for async PDFs & emails
 > - `scheduler`: Periodic task execution worker (`schedule:work`)
 > - `mailpit`: Local email testing UI on port `8025` (SMTP on `1025`)
