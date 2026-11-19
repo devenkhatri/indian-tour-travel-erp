@@ -94,6 +94,7 @@ COPY . .
 # Copy built vendor dependencies and frontend assets from build stages
 COPY --from=composer-deps /app/vendor ./vendor
 COPY --from=frontend /app/public/build ./public/build
+COPY --from=frontend /app/public/build /opt/build
 
 # Set permissions for Laravel storage and cache directories
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \

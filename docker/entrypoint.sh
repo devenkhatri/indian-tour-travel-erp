@@ -23,6 +23,13 @@ if [ ! -f /var/www/html/vendor/autoload.php ]; then
     composer install --no-interaction --prefer-dist --optimize-autoloader
 fi
 
+# Ensure built frontend assets exist in public/build (handles volume mounts)
+if [ ! -f /var/www/html/public/build/manifest.json ] && [ -d /opt/build ]; then
+    echo "Restoring compiled frontend assets into public/build..."
+    mkdir -p /var/www/html/public/build
+    cp -r /opt/build/* /var/www/html/public/build/
+fi
+
 # Auto-generate application encryption key if missing (only in primary app container to prevent race conditions)
 if [ -z "$CONTAINER_ROLE" ] && [ -f /var/www/html/.env ]; then
     if ! grep -q "^APP_KEY=base64:" /var/www/html/.env && ! grep -q "^APP_KEY=.*[a-zA-Z0-9]" /var/www/html/.env; then
